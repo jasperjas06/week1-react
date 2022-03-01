@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>
+
+    </title>
+  </head>
+  <body>
+    <h1>Refresh and open console to check the output</h1>
+<script>
+
+function words(){
+var para="The nightingale, as soon as April bringeth Unto her rested sense a perfect waking,While late bare earth, proud of new clothing, springeth,Sings out her woes, a thorn her song-book making,And mournfully bewailing,Her throat in tunes expresseth What grief her breast oppresseth For Tereus’ force on her chaste will prevailing.O Philomela fair, O take some gladness,That here is juster cause of plaintful sadness:Thine earth now springs, mine fadeth; Thy thorn without, my thorn my heart invadeth.Alas, she hath no other cause of anguish But Tereus’ love, on her by strong hand wroken,Wherein she suffering, all her spirits languish; Full womanlike complains her will was broken.But I, who daily craving, Cannot have to content me,Have more cause to lament me,Since wanting is more woe than too much having.O Philomela fair, O take some gladness,That here is juster cause of plaintful sadness:Thine earth now springs, mine fadeth;Thy thorn without, my thorn my heart invadeth."
+
+para=para.replace(/,/g,"");
+para=para.replace(/\./g,"");
+para=para.toLowerCase(para);
+//console.log(para);//this code is used to view the varibale text after the following changes
+
+let word = para.split(" ");//here we spliting the space in the words and storing it in the variable named Words
+console.log(`Total words: ${word.length}`);//to view the changes
+
+const count = {};//creating the empty object
+
+word.forEach((item) => {
+  if (count[item] == null) count[item] = 1;
+    else {
+      count[item] += 1;
+    }
+  
+  
+});//using for of to filter the reapted words and assinging to the empty array
+
+
+console.log(count);//to view the output
+
+}
+words();
+
+
+    </script>
+</body>
+</html>
